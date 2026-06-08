@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   build_packages:
     runs-on: ubuntu-latest
@@ -16,10 +19,10 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y rpm cmake build-essential
+        sudo apt-get install -y cmake build-essential
 
     - name: Configure CMake
-      run: cmake -H. -B_build -DCPACK_GENERATOR="TGZ;DEB;RPM"
+      run: cmake -H. -B_build -DCPACK_GENERATOR="TGZ;DEB"
 
     - name: Build Package
       run: cmake --build _build --target package
@@ -30,6 +33,5 @@ jobs:
         files: |
           _build/*.tar.gz
           _build/*.deb
-          _build/*.rpm
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
