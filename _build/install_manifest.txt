@@ -1,0 +1,4 @@
+/home/tanya/tananaa/workspace/lab03/_install/lib/libprint.a
+/home/tanya/tananaa/workspace/lab03/_install/include/print.hpp
+/home/tanya/tananaa/workspace/lab03/_install/cmake/print-config.cmake
+/home/tanya/tananaa/workspace/lab03/_install/cmake/print-config-noconfig.cmake
