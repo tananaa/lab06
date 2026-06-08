@@ -1,6 +1,6 @@
+#include <gtest/gtest.h>
 #include "banking/Transaction.hpp"
 #include "banking/Account.hpp"
-#include <gtest/gtest.h>
 
 TEST(TransactionTest, ExecuteTransfersMoney) {
     Account from("A1");

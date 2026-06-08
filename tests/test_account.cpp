@@ -1,5 +1,5 @@
-#include "banking/Account.hpp"
 #include <gtest/gtest.h>
+#include "banking/Account.hpp"
 
 TEST(AccountTest, InitialBalanceIsZero) {
     Account acc("12345");

@@ -2,7 +2,6 @@
 #define TRANSACTION_HPP
 
 #include "Account.hpp"
-#include <string>
 
 class Transaction {
 private:
