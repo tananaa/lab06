@@ -13,16 +13,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Install dependencies
+    - name: Install GTest
       run: |
         sudo apt update
         sudo apt install -y libgtest-dev cmake
         cd /usr/src/gtest
-        sudo cmake CMakeLists.txt
+        sudo cmake .
         sudo make
         sudo cp lib/*.a /usr/lib
     
-    - name: Configure CMake
+    - name: Configure CMake with tests
       run: cmake -H. -B_build -DBUILD_TESTS=ON
     
     - name: Build
